@@ -1,3 +1,7 @@
+h1{
+    -webkit-app-region: drag;
+}
+
 h2{ 
     color: aqua; 
 }

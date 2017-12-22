@@ -1,0 +1,7 @@
+h1{
+    -webkit-app-region: drag;
+}
+
+form{
+    margin: 20px 0;
+}

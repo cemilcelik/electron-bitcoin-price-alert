@@ -10,6 +10,13 @@ document
         const price = document.getElementById('input-price');
         ipcRenderer.send('alarm:set', price.value);
 
-        const window = remote.getCurrentWindow();
-        window.close();
+        closeWindow();
     });
+
+document
+    .getElementById('link-close-window')
+    .addEventListener('click', closeWindow);
+
+function closeWindow() {
+    remote.getCurrentWindow().close();
+}

@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-body{ 
-    background-color: whitesmoke; 
+body{
+    margin: 0;
+    padding: 15px;
+    background-color: rgba(0, 139, 139, 0.8);
     font-family: Roboto, Tahoma, Verdana; 
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 15px;
 }

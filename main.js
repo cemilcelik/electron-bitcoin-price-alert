@@ -6,10 +6,15 @@ const { app, BrowserWindow, Menu, shell, ipcMain } = electron;
 
 let indexWindow;
 
+process.env.NODE_ENV = 'production';
+
 app.on('ready', function() {
     indexWindow = new BrowserWindow({
         width: 1024,
-        height: 768
+        height: 768,
+        transparent: true,
+        alwaysOnTop: true,
+        frame: false
     });
 
     indexWindow.loadURL(url.format({
@@ -17,15 +22,17 @@ app.on('ready', function() {
         protocol: 'file',
         slashes: true
     }));
-
-    indexWindow.toggleDevTools();
-
+    
     indexWindow.on('close', function() {
         app.quit();
     });
-
+    
     const mainMenu = Menu.buildFromTemplate(menuTemplate);
     Menu.setApplicationMenu(mainMenu);
+
+    if (process.env.NODE_ENV == 'development') {
+        indexWindow.toggleDevTools();
+    }
 });
 
 const menuTemplate = [
@@ -34,7 +41,7 @@ const menuTemplate = [
         submenu: [
             {
                 label: 'Exit',
-                accelerator: 'Ctrl+W',
+                accelerator: 'Ctrl+Q',
                 click() {
                     app.quit();
                 }
