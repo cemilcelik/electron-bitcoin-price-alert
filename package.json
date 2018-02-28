@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/bitcoin.icns --prune=true --out=release-builds",
-    "package-win": "electron-packager . electron-bitcoin-price-alert --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/bitcoin.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Bitcoin Price Alert\"",    
+    "package-win": "electron-packager . electron-bitcoin-price-alert --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/bitcoin.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Bitcoin Price Alert\"",
     "package-linux": "electron-packager . electron-bitcoin-price-alert --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/bitcoin.png --prune=true --out=release-builds"
   },
   "keywords": [],
@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.17.1",
-    "electron": "^1.7.10"
+    "electron": "^1.8.2"
   },
   "devDependencies": {
     "electron-packager": "^10.1.0"
